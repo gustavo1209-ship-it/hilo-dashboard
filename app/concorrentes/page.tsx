@@ -2,7 +2,7 @@ import { getCompetitors } from "@/lib/queries";
 import PageHeader from "@/components/PageHeader";
 import { ExternalLink } from "lucide-react";
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 const TYPE_LABEL: Record<string, string> = {
   online: "Online", physical: "Físico", hybrid: "Híbrido",

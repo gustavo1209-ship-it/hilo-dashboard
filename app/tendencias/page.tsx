@@ -2,7 +2,7 @@ import { getProductTrends } from "@/lib/queries";
 import PageHeader from "@/components/PageHeader";
 import { TrendingUp, TrendingDown, Minus } from "lucide-react";
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 type Trend = {
   categoria: string; tendencia: string; temporada: string;

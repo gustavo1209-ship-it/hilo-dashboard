@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import { Package, Users, Tag, TrendingUp, Store, BarChart2, Lightbulb } from "lucide-react";
 import Link from "next/link";
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
   const [kpis, competitors, insights, brandPricing] = await Promise.all([

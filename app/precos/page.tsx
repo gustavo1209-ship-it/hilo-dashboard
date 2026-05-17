@@ -1,7 +1,7 @@
 import { getHiloBrandsPricing, getPricingByCategory } from "@/lib/queries";
 import PageHeader from "@/components/PageHeader";
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 export default async function PrecosPage() {
   const [hiloData, allData] = await Promise.all([

@@ -2,7 +2,7 @@ import { getCollectionHealth } from "@/lib/queries";
 import PageHeader from "@/components/PageHeader";
 import { CheckCircle2, XCircle, Clock } from "lucide-react";
 
-export const revalidate = 300;
+export const dynamic = 'force-dynamic';
 
 type Health = {
   collector: string; total_runs: number; sucessos: number; erros: number;

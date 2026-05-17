@@ -2,7 +2,7 @@ import { getScrapedProductsSummary } from "@/lib/queries";
 import PageHeader from "@/components/PageHeader";
 import { Tag } from "lucide-react";
 
-export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 type Product = {
   name: string;
