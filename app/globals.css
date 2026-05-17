@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --hilo-black:      #111111;
+  --hilo-white:      #FAFAF8;
+  --hilo-gold:       #C4A46B;
+  --hilo-gold-light: #E8D5B0;
+  --hilo-gray:       #6B6B6B;
+  --hilo-light:      #F4F1EC;
+  --hilo-border:     #E5DFD5;
+  --hilo-muted:      #9A9289;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-hilo-black:      var(--hilo-black);
+  --color-hilo-white:      var(--hilo-white);
+  --color-hilo-gold:       var(--hilo-gold);
+  --color-hilo-gold-light: var(--hilo-gold-light);
+  --color-hilo-gray:       var(--hilo-gray);
+  --color-hilo-light:      var(--hilo-light);
+  --color-hilo-border:     var(--hilo-border);
+  --color-hilo-muted:      var(--hilo-muted);
+  --font-sans:  var(--font-inter);
+  --font-serif: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+* { box-sizing: border-box; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--hilo-light);
+  color: var(--hilo-black);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--hilo-light); }
+::-webkit-scrollbar-thumb { background: var(--hilo-gold); border-radius: 10px; }
+
+.hilo-card {
+  background: white;
+  border: 1px solid var(--hilo-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.badge-alta  { background:#FEE2E2;color:#991B1B;font-size:.7rem;padding:2px 8px;border-radius:999px;font-weight:600; }
+.badge-media { background:#FEF3C7;color:#92400E;font-size:.7rem;padding:2px 8px;border-radius:999px;font-weight:600; }
+.badge-baixa { background:#D1FAE5;color:#065F46;font-size:.7rem;padding:2px 8px;border-radius:999px;font-weight:600; }
